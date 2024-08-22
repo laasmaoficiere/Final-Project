@@ -80,9 +80,13 @@ The final presentation includes the project overview, key findings, and model pe
 - Streamlit (for running the app)
 - Tableau Public (for visualizations)
 
-### Installation
-Clone this repository to your local machine:
+## Streamlit App
+
+A Streamlit app was developed to allow users to predict Airbnb prices based on selected features such as room type, availability, minimum nights, and location (city and neighborhood). The app dynamically filters neighborhoods based on the selected city, making it user-friendly even with a large number of neighborhood options.
+
+### Running the App
+To run the Streamlit app for price prediction:
 
 ```bash
-git clone https://github.com/yourusername/airbnb-analysis.git
+streamlit run app.py
 
