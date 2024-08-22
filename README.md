@@ -63,7 +63,7 @@ Explore interactive visualizations of the data, including:
 - Sentiment analysis by city and room type
 - Keyword frequency in guest reviews
 
-**[Tableau Dashboard](#)**
+[Tableau Dashboard](https://public.tableau.com/app/profile/lasma.oficiere/viz/Book1_17243585527130/AirBnB?publish=yes)
 
 ## Final Presentation
 
