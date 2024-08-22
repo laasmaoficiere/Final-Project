@@ -1,5 +1,4 @@
-# Airbnb Data Analysis and Price Prediction
-
+# 🏠 Airbnb Data Analysis and Price Prediction
 ## Overview
 
 This project aims to explore and analyze Airbnb data for 10 major U.S. cities: Austin, Chicago, Columbus, Dallas, Denver, Los Angeles, New York, San Diego, San Francisco, and Seattle. The dataset includes information on Airbnb listings, including location, price, availability throughout the year, minimum nights, and reviews. The goal of this project is to provide insights into Airbnb pricing and review sentiments, as well as to build a price prediction model.
