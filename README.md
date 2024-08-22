@@ -70,9 +70,7 @@ The final presentation includes the project overview, key findings, and model pe
 
 **[View Presentation](#)**
 
-## Getting Started
-
-### Prerequisites
+## Prerequisites
 - Python 3.7+
 - Jupyter Notebook
 - pandas, numpy, scikit-learn, matplotlib, seaborn
