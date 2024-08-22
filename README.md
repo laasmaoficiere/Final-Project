@@ -27,9 +27,14 @@ This project aims to explore and analyze Airbnb data for 10 major U.S. cities: A
 ### Price Per Room/Accommodation Type
 - Analysis of how prices vary across different types of accommodations, such as entire homes/apartments, private rooms, shared rooms, and hotel rooms.
 
+![Price Distribution](Images/price_room_box.png)
+
 ### Price Per City
 - Comparison of average Airbnb prices across the 10 cities.
 - Identification of the most and least expensive cities in the dataset.
+
+![Price Distribution](Images/min_max_mean.png)
+
 
 ### Availability and Minimum Nights
 - Exploration of Airbnb availability throughout the year and the minimum number of nights required for booking.
