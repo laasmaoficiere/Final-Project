@@ -1,15 +1,14 @@
 import streamlit as st
+import pandas as pd
 import pickle
 import numpy as np
-import pandas as pd
-
 
 # Load the trained model
 with open('random_forest_model_final_1.pkl', 'rb') as file:
     model = pickle.load(file)
 
 # Load the CSV file containing the location data
-location_data_df = pd.read_csv('Data/Unique_Neighborhoods.csv')
+location_data_df = pd.read_csv('Data/Cleaned_Airbnb_Data_No_Outliers.csv')
 
 st.title('Airbnb Price Prediction App')
 
@@ -31,14 +30,30 @@ neighborhood = st.selectbox('Neighborhood', neighborhood_df['neighbourhood'])
 # Room type selection
 room_type = st.selectbox('Room Type', ['Entire home/apt', 'Private room', 'Shared room', 'Hotel room'])
 
+# Collect the input data into a DataFrame
+input_data = pd.DataFrame({
+    'minimum_nights': [minimum_nights],
+    'availability_365': [availability_365],
+    'state': [state],
+    'city': [city],
+    'neighbourhood': [neighborhood],
+    'room_type': [room_type]
+})
 
+# Perform the same encoding as done during model training
+encoded_input = pd.get_dummies(input_data, columns=['state', 'city', 'neighbourhood', 'room_type'], drop_first=True)
 
-# Prepare the input array for prediction
-input_features = np.array([[ minimum_nights, 
-                            availability_365, room_type, 
-                            neighborhood, city, state]])
+# Align the encoded input with the features expected by the model
+# Ensure that all expected columns are present, fill missing ones with 0
+for col in model.feature_names_in_:
+    if col not in encoded_input.columns:
+        encoded_input[col] = 0
 
-df_no_outliers_encoded = pd.get_dummies(df_no_outliers, columns=['room_type', 'neighbourhood', 'city', 'state'], drop_first=True)
+# Remove any extra columns that are not expected by the model
+encoded_input = encoded_input[model.feature_names_in_]
+
+# Convert to numpy array for model prediction
+input_features = encoded_input.values
 
 # Make a prediction
 if st.button('Predict Price'):
