@@ -44,9 +44,13 @@ This project aims to explore and analyze Airbnb data for 10 major U.S. cities: A
 ### Keyword Analysis
 - Extraction of the most common keywords in reviews to understand what guests value the most in their Airbnb experience.
 
+![Price Distribution](Images/keywords.png)
+
 ### Sentiment Analysis
 - Sentiment analysis of guest reviews to gauge the overall satisfaction level.
 - Visualization of sentiment distribution across different cities and room types.
+
+![Price Distribution](Images/sentiment.png)
 
 ## Price Prediction Model
 
