@@ -77,7 +77,7 @@ Explore interactive visualizations of the data, including:
 
 The final presentation includes the project overview, key findings, and model performance.
 
-**[View Presentation](#)**
+**[View Presentation](https://www.beautiful.ai/player/-O4yJsVI3PH9ip4Tqygi)**
 
 ## Prerequisites
 - Python 3.7+
